@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <long name="fire-count" value="3" />
+    <string name="last-used-date">2022-11-14</string>
+    <long name="fire-global" value="1668028659622" />
+    <set name="fire-core/20.1.1 fire-analytics/21.0.0 device-name/havoc_whyred kotlin/1.7.20 fire-fcm/23.0.5 android-installer/com.android.vending fire-installations/17.0.1 fire-android/30 fire-cls-ndk/18.2.11 android-platform/ android-min-sdk/21 fire-cls/18.2.11 device-brand/Xiaomi android-target-sdk/33 device-model/whyred fire-transport/18.1.4">
+        <string>2022-11-09</string>
+        <string>2022-11-10</string>
+    </set>
+    <set name="fire-core/20.1.1 fire-analytics/21.0.0 device-name/havoc_whyred kotlin/1.7.20 fire-fcm/23.0.5 android-installer/com.android.vending fire-installations/17.0.1 fire-android/30 fire-cls-ndk/18.2.11 android-platform/ android-min-sdk/21 fire-cls/18.2.11 device-brand/Xiaomi android-target-sdk/33 fire-transport/18.1.4 device-model/whyred">
+        <string>2022-11-14</string>
+    </set>
+</map>
