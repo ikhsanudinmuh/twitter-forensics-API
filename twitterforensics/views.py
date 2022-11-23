@@ -213,19 +213,159 @@ def get_devices(request):
 def pullTwitter(request, id):
   if request.method == "GET":
     print("Device Twitter ->", id)
-    notif = "&& echo '<br>\nCopy twitter package from root data: <code>success</code>\nMoved to sccard folder: <code>success</code>\nCopy file to current directory: <code>success</code>\nExtract file: <code>success</code>'"
+    notif = "&& echo '<br>\nCopy twitter package from root data: <code>success</code>\nMoved to sdcard folder: <code>success</code>\nCopy file to current directory: <code>success</code>\nExtract file: <code>success</code>'"
     (rc, out, err) = adb(["shell", "su 0 -c", "'cp -r /data/data/com.twitter.android /sdcard'", notif], device=id)
     (rc0, out0, err0) = adb(["shell", "cd /sdcard; tar -zcvf com.twitter.android.tar.gz com.twitter.android"], device=id)
     (rc1, out1, err1) = adb(["pull", "sdcard/com.twitter.android.tar.gz", "twitterforensics/data"], device=id)
     print(os.system("cd twitterforensics\data && tar -xvf com.twitter.android.tar.gz"))
 
+    success = False;
+    message = '';
+
     if rc != 0:
       print("RC Error", err)
+      message = err;
     else:
       print("Copy twitter package from root data success")
+      success = True;
+      message = 'Copy twitter package from root data success';
 
-    return HttpResponse(out.decode())
+    return JsonResponse({
+      'success': success,
+      'message' : message,
+    }, safe=False)
 
+def showTwitterChat(request, id):
+    if request.method == "GET":
+        (_, out, _) = adb(['devices'])
+        serial = None
+        for l in out.split('\n'.encode("utf-8")):
+            tokens = l.split()
+            if not len(tokens) == 2:
+                # Discard line that doesn't contain device information
+                continue
+            serial = tokens[0].decode('utf-8')
+
+
+        # Get users data at application
+        foren_id = []
+        global_db = sqlite3.connect(
+            "D:/Kuliah/Semester 7/Forensik Digital/djangoproject/twitterforensics/data/com.twitter.android/databases/721493985282293760-63-versioncode-29653000.db")
+        cur_global_db = global_db.cursor()
+        cursor_global_db = cur_global_db.execute(
+            "SELECT user_id as 'id', username as 'username', name as 'full_name' from users;")
+        names_global_db = [description[0] for description in cursor_global_db.description]
+
+        for i in cursor_global_db:
+            Temp = {}
+            for j in range(0, len(i)):
+                Temp[names_global_db[j]] = i[j]
+            foren_id.append(Temp)
+        global_db.close()
+
+        # Get detail of conversation
+        id_versioncode_db = sqlite3.connect(
+            "D:/Kuliah/Semester 7/Forensik Digital/djangoproject/twitterforensics/data/com.twitter.android/databases/721493985282293760-63-versioncode-29653000.db")
+        cur_id_versioncode_db = id_versioncode_db.cursor()
+        cursor_id_versioncode_db = cur_id_versioncode_db.execute(
+            "SELECT conversation.conversation_entries_user_id as 'UserID', conversation.users_username as 'username', conversation.users_image_url as 'imageProfile', conversation.conversation_entries_data as 'chatData', dm_inbox.conversations_conversation_id as 'ContentID' FROM dm_inbox INNER JOIN conversation on dm_inbox.conversations_conversation_id = conversation.conversation_entries_conversation_id ORDER BY conversation._id;")
+        names_id_versioncode_db = [description[0] for description in cursor_id_versioncode_db.description]
+        id_versioncode = []
+
+        Test = []
+        count = 1
+        for i in cursor_id_versioncode_db:
+            Aho = {}
+            Temp = {}  # {}
+            TempTemp = {}  # ContentInfo:{}
+            TempTempTemp = {}  # 1:{}
+            for j in range(0, len(i)):
+
+                # Only contentID
+                if names_id_versioncode_db[j] == 'ContentID':
+                    Temp[names_id_versioncode_db[j]] = i[j]
+                    if i[j] not in [z['ContentID'] for z in id_versioncode]:
+                        count = 1
+                        Aho['ContentID'] = i[j]
+                        Aho['ContentInfo'] = {}
+                        Aho['ContentWith'] = ""
+                        Aho['ContentWithUserID'] = ""
+                        Aho['ContentWithUserFullName'] = ""
+                        Test.append(Aho)
+                        who = i[j].split('-')
+                        for k in range(0, 2):
+                            if who[k] == str(TempTemp['UserID']):
+                                got = 1 if k == 0 else 0
+                                TempTemp['fromID'] = int(who[k])
+                                TempTemp['toID'] = int(who[got])
+                        TempTempTemp[count] = TempTemp
+                    elif i[j] in [z['ContentID'] for z in id_versioncode]:
+                        count += 1
+                        who = i[j].split('-')
+                        for k in range(0, 2):
+                            if who[k] == str(TempTemp['UserID']):
+                                got = 1 if k == 0 else 0
+                                TempTemp['fromID'] = int(who[k])
+                                TempTemp['toID'] = int(who[got])
+                        TempTempTemp[count] = TempTemp
+                else:
+                    if names_id_versioncode_db[j] == 'chatData':
+                        TempTemp[names_id_versioncode_db[j]] = i[j].decode(encoding='utf-8', errors='ignore')
+                    else:
+                        TempTemp[names_id_versioncode_db[j]] = i[j]
+
+            # Only contentInfo from 'else' above
+            Temp['ContentInfo'] = TempTempTemp
+            id_versioncode.append(Temp)
+
+        id_versioncode_db.close()
+
+        for i in range(0, len(Test)):
+            who = Test[i]['ContentID'].split('-')
+            Test[i]['ContentWithUserID'] = who[1]
+
+            for l in range(0, len(foren_id)):
+                if foren_id[l]['id'] == eval(Test[i]['ContentWithUserID']):
+                    Test[i]['ContentWith'] = foren_id[l]['username']
+                    Test[i]['ContentWithUserFullName'] = foren_id[l]['full_name']
+
+            for j in range(0, len(id_versioncode)):
+                if Test[i]['ContentID'] == id_versioncode[j]['ContentID']:
+                    Test[i]['ContentInfo'].update(id_versioncode[j]['ContentInfo'])
+
+        if serial == id:
+            return JsonResponse(Test, safe=False)
+
+def showTwitterUser(request, id) :
+  if request.method == "GET":
+    (_, out, _) = adb(['devices'])
+    serial = None
+    for l in out.split('\n'.encode("utf-8")):
+      tokens = l.split()
+      if not len(tokens) == 2:
+        # Discard line that doesn't contain device information
+        continue
+      serial = tokens[0].decode('utf-8')
+
+
+    # Get users data at application
+    foren_id = []
+    global_db = sqlite3.connect(
+      "D:/Kuliah/Semester 7/Forensik Digital/djangoproject/twitterforensics/data/com.twitter.android/databases/721493985282293760-63-versioncode-29653000.db")
+    cur_global_db = global_db.cursor()
+    cursor_global_db = cur_global_db.execute(
+      "SELECT user_id as 'id', username as 'username', name as 'full_name', followers, image_url from users LIMIT 50;")
+    names_global_db = [description[0] for description in cursor_global_db.description]
+
+    for i in cursor_global_db:
+      Temp = {}
+      for j in range(0, len(i)):
+        Temp[names_global_db[j]] = i[j]
+      foren_id.append(Temp)
+    global_db.close()
+    
+    if serial == id :
+      return JsonResponse(foren_id, safe=False)
 
 @csrf_exempt
 def post_shell(request):

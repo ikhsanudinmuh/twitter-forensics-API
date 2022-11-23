@@ -3,41 +3,41 @@
     <long name="du_mobile_image_rx" value="0" />
     <long name="du_mobile_prefetch_rx" value="0" />
     <long name="du_mobile_api_ads_rx" value="0" />
-    <long name="du_wifi_api_ads_rx" value="644" />
-    <long name="du_wifi_rx" value="9662931" />
+    <long name="du_wifi_api_ads_rx" value="0" />
+    <long name="du_wifi_rx" value="351751" />
     <long name="du_wifi_api_timeline_rx" value="0" />
-    <long name="du_wifi_tx" value="232512" />
+    <long name="du_wifi_tx" value="11586" />
     <long name="du_mobile_api_rx" value="0" />
     <long name="du_wifi_api_prompts_rx" value="0" />
     <long name="du_mobile_api_other_rx" value="0" />
     <long name="du_mobile_api_tx" value="0" />
-    <long name="du_wifi_api_users_rx" value="4535" />
+    <long name="du_wifi_api_users_rx" value="0" />
     <long name="du_mobile_api_activity_rx" value="0" />
-    <long name="du_wifi_api_other_rx" value="813238" />
+    <long name="du_wifi_api_other_rx" value="92528" />
     <long name="du_mobile_video_rx" value="0" />
     <long name="du_mobile_api_timeline_rx" value="0" />
     <long name="du_mobile_api_friends_rx" value="0" />
-    <long name="du_wifi_api_tx" value="217011" />
-    <long name="du_wifi_api_dm_rx" value="5350" />
-    <long name="du_wifi_api_rx" value="838259" />
-    <long name="du_wifi_image_rx" value="5813906" />
+    <long name="du_wifi_api_tx" value="11586" />
+    <long name="du_wifi_api_dm_rx" value="0" />
+    <long name="du_wifi_api_rx" value="94976" />
+    <long name="du_wifi_image_rx" value="256565" />
     <long name="du_mobile_api_help_rx" value="0" />
     <long name="du_wifi_api_conversation_rx" value="0" />
-    <long name="du_wifi_video_rx" value="2976266" />
+    <long name="du_wifi_video_rx" value="0" />
     <long name="du_mobile_api_statuses_rx" value="0" />
     <long name="du_wifi_api_activity_rx" value="0" />
     <long name="du_wifi_image_found_media_rx" value="0" />
-    <long name="du_wifi_api_help_rx" value="6685" />
+    <long name="du_wifi_api_help_rx" value="2448" />
     <long name="du_mobile_api_users_rx" value="0" />
     <long name="du_wifi_prefetch_rx" value="0" />
-    <long name="du_wifi_api_friends_rx" value="7807" />
+    <long name="du_wifi_api_friends_rx" value="0" />
     <long name="du_mobile_api_dm_rx" value="0" />
     <long name="du_mobile_api_conversation_rx" value="0" />
     <long name="du_mobile_tx" value="0" />
     <long name="du_mobile_api_prompts_rx" value="0" />
     <long name="du_wifi_api_statuses_rx" value="0" />
     <long name="du_mobile_rx" value="0" />
-    <long name="time_in_foreground_ms" value="562517" />
+    <long name="time_in_foreground_ms" value="0" />
     <long name="du_mobile_image_found_media_rx" value="0" />
-    <long name="last_report_ms" value="1668407546306" />
+    <long name="last_report_ms" value="1669082963876" />
 </map>

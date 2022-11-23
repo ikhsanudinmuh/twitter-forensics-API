@@ -44,10 +44,10 @@
     <string name="host.api-30-0-0.twitter.com">SQkIAUlqFmFwaS0zMC0wLTAudHdpdHRlci5jb21yBEXDtIBYWA==</string>
     <string name="host.api-41-6-0-41-0-0.twitter.com">SQkIAUlqHWFwaS00MS02LTAtNDEtMC0wLnR3aXR0ZXIuY29tcgTR7dWAWFg=</string>
     <string name="host.api-24-0-0.twitter.com">SQkIAUlqFmFwaS0yNC0wLTAudHdpdHRlci5jb21yBEXDs4BYWA==</string>
-    <string name="host.api.twitter.com">SQkIAggBEgQJSWoPYXBpLnR3aXR0ZXIuY29tcgRo9CoCWElqD2FwaS50d2l0dGVyLmNvbXIEaPQqQlhJag9hcGkudHdpdHRlci5jb21yBGj0KoJYSWoPYXBpLnR3aXR0ZXIuY29tcgRo9CrCWFg=</string>
+    <string name="host.api.twitter.com">SQkIAggBEgQJSWoPYXBpLnR3aXR0ZXIuY29tcgRo9CrCWElqD2FwaS50d2l0dGVyLmNvbXIEaPQqglhJag9hcGkudHdpdHRlci5jb21yBGj0KkJYSWoPYXBpLnR3aXR0ZXIuY29tcgRo9CoCWFg=</string>
     <string name="host.upload-global.glbtls.t.co">SQkIAUlqGXVwbG9hZC1nbG9iYWwuZ2xidGxzLnQuY29yBCJrx+NYWA==</string>
     <string name="host.api-41-0-0.twitter.com">SQkIAUlqFmFwaS00MS0wLTAudHdpdHRlci5jb21yBEXDq4BYWA==</string>
-    <long name="timestamp.expiration" value="1668754124095" />
+    <long name="timestamp.expiration" value="1669388106921" />
     <string name="host.api-44-0-0.twitter.com">SQkIAUlqFmFwaS00NC0wLTAudHdpdHRlci5jb21yBEXDpYBYWA==</string>
     <string name="host.api-41-5-1-41-0-0.twitter.com">SQkIAUlqHWFwaS00MS01LTEtNDEtMC0wLnR3aXR0ZXIuY29tcgTR7daAWFg=</string>
     <string name="host.api-41-4-2-41-6-4.twitter.com">SQkIAUlqHWFwaS00MS00LTItNDEtNi00LnR3aXR0ZXIuY29tcgTR7dmKWFg=</string>
@@ -68,7 +68,7 @@
     <string name="host.api-41-4-2-41-6-2.twitter.com">SQkIAUlqHWFwaS00MS00LTItNDEtNi0yLnR3aXR0ZXIuY29tcgTR7dmIWFg=</string>
     <string name="host.api-0-4-7.twitter.com">SQkIAUlqFWFwaS0wLTQtNy50d2l0dGVyLmNvbXIE0e3JgFhY</string>
     <string name="host.api-41-0-0-41-6-6.twitter.com">SQkIAUlqHWFwaS00MS0wLTAtNDEtNi02LnR3aXR0ZXIuY29tcgRFw6uMWFg=</string>
-    <string name="host.upload.twitter.com">SQkIAggBEgQJSWoSdXBsb2FkLnR3aXR0ZXIuY29tcgRo9CpLWElqEnVwbG9hZC50d2l0dGVyLmNvbXIEaPQqi1hJahJ1cGxvYWQudHdpdHRlci5jb21yBGj0KgtYSWoSdXBsb2FkLnR3aXR0ZXIuY29tcgRo9CrLWFg=</string>
+    <string name="host.upload.twitter.com">SQkIAggBEgQJSWoSdXBsb2FkLnR3aXR0ZXIuY29tcgRo9CrLWElqEnVwbG9hZC50d2l0dGVyLmNvbXIEaPQqS1hJahJ1cGxvYWQudHdpdHRlci5jb21yBGj0KotYSWoSdXBsb2FkLnR3aXR0ZXIuY29tcgRo9CoLWFg=</string>
     <string name="host.api-41-4-2-41-6-1.twitter.com">SQkIAUlqHWFwaS00MS00LTItNDEtNi0xLnR3aXR0ZXIuY29tcgTR7dmHWFg=</string>
     <string name="host.api-0-4-6.twitter.com">SQkIAUlqFWFwaS0wLTQtNi50d2l0dGVyLmNvbXIE0e3IgFhY</string>
     <string name="host.api-0-4-5.twitter.com">SQkIAUlqFWFwaS0wLTQtNS50d2l0dGVyLmNvbXIE0e3LgFhY</string>
@@ -83,7 +83,7 @@
     <string name="host.api-41-4-3-41-4-3.twitter.com">SQkIAUlqHWFwaS00MS00LTMtNDEtNC0zLnR3aXR0ZXIuY29tcgTR7dqGWFg=</string>
     <string name="host.api-0-4-0.twitter.com">SQkIAUlqFWFwaS0wLTQtMC50d2l0dGVyLmNvbXIE0e3EgFhY</string>
     <string name="host.dc.glbtls.t.co">SQkIAUlqDmRjLmdsYnRscy50LmNvcgQiZoe0WFg=</string>
-    <long name="timestamp.poll_after" value="1668494924095" />
+    <long name="timestamp.poll_after" value="1669128906921" />
     <string name="host.api-0-4-2.twitter.com">SQkIAUlqFWFwaS0wLTQtMi50d2l0dGVyLmNvbXIE0e3FgFhY</string>
     <string name="host.api-41-4-1-41-5-2.twitter.com">SQkIAUlqHWFwaS00MS00LTEtNDEtNS0yLnR3aXR0ZXIuY29tcgTR7diDWFg=</string>
     <string name="host.api-41-4-1-41-5-1.twitter.com">SQkIAUlqHWFwaS00MS00LTEtNDEtNS0xLnR3aXR0ZXIuY29tcgTR7diCWFg=</string>

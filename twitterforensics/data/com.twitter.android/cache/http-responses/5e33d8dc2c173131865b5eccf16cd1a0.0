@@ -9,24 +9,24 @@ content-length: 74
 etag: 184876e0a8f04195126fa37c9f7065c9
 cache-control: no-cache, private
 content-encoding: gzip
-date: Mon, 14 Nov 2022 14:03:23 GMT
+date: Sat, 19 Nov 2022 06:56:30 GMT
 perf: 7626143928
 vary: Accept-Encoding
 server: tsa_k
-x-amzn-trace-id: Root=1-63724aab-1612386c738bf09657cd407b
-x-transaction-id: c1eff288fb86471e
+x-amzn-trace-id: Root=1-63787e1f-05be423b0ccc2bf03ef5a32f
+x-transaction-id: 34c6bbb42c82f6c0
 x-rate-limit-limit: 100
-x-rate-limit-reset: 1668435280
-x-rate-limit-remaining: 92
+x-rate-limit-reset: 1668841890
+x-rate-limit-remaining: 99
 strict-transport-security: max-age=631138519
-x-response-time: 285
-x-connection-hash: 85bf2ca43e41f930bc3707e06016580fa4577b7accf8fbbae5682908b4c2c2a7
+x-response-time: 218
+x-connection-hash: e3235d21c1fa183db51336c8198b16bc849da3c24c30e105306584a33c892201
 x-cache: Miss from cloudfront
-via: 1.1 6ddfc55dbf10d9a646bfcdba6cd89472.cloudfront.net (CloudFront)
+via: 1.1 de07fad430c1bc86fd21b4e969faf29c.cloudfront.net (CloudFront)
 x-amz-cf-pop: SIN2-P2
-x-amz-cf-id: 5VJp2n5aChVuvAn4TOC1QkPaCvxp-1acy-v-1bwXvgE69jM8EDTrcg==
-OkHttp-Sent-Millis: 1668434601931
-OkHttp-Received-Millis: 1668434602333
+x-amz-cf-id: vJ4g-oDpd70R8hYEoZBY81sOd7nlkUQHqulJa85W085Q24HX-ux7fQ==
+OkHttp-Sent-Millis: 1668840990119
+OkHttp-Received-Millis: 1668840990386
 
 TLS_AES_128_GCM_SHA256
 3
