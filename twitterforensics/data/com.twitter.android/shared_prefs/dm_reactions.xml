@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<map>
-    <boolean name="has_shown_pinned_conversation_education_dialog" value="true" />
-    <long name="education_shown_time" value="1668434540766" />
-    <int name="education_shown_count" value="20" />
-</map>

@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<map>
-    <string name="lifecycle">{&quot;backgroundCount&quot;:15,&quot;backgroundTime_ms&quot;:0,&quot;bootCount&quot;:0,&quot;coldLaunchCount&quot;:17,&quot;foregroundCount&quot;:15,&quot;foregroundTime_ms&quot;:0}</string>
-    <boolean name="Started" value="false" />
-    <string name="SdkVersion">1.0.1</string>
-</map>
